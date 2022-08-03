@@ -49,17 +49,17 @@ background-size:cover;
   color:yellow;
  }
  .hue {
-  color:yellow;
+  color:blue;
   padding:10px;
   border-radius:10px;
   animation:hue 5s linear infinite;
   -webkit-animation: hue 5s linear infinite;
-  box-shadow: 0px 0px 50px yellow;
-  color:white;
+  box-shadow: 0px 0px 50px white;
+  color:blue;
   background:rgba(255,255,0,0.4);
  }
  .hue:hover{
-  color:yellow;
+  color:blue;
   background:transparent;
  }
  @keyframes hue{
@@ -68,13 +68,13 @@ background-size:cover;
  -webkit-filter:hue-rotate(0deg);
  }
  10%{
- box-shadow: 0px 1px 50px yellow;
+ box-shadow: 0px 1px 50px blue;
  }
  20%{
- box-shadow: 1px 1px 50px yellow;
+ box-shadow: 1px 1px 50px blue;
  }
  30%{
- box-shadow: 1px 0px 50px yellow;
+ box-shadow: 1px 0px 50px blue;
  }
  40%{
   box-shadow: 1px -1px 50px yellow;
@@ -240,8 +240,7 @@ function goldhen222(){
 <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Sedang proses....Mohon tunggu</h1>
 <div class="content" >
  	    <div class="text" >
- 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :</span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >Karo Sharifi</span>
- 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Znullptr ... </a>
+ 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="blue" >MUSTIKA GAME STATION KEDIRI </span >&nbsp;&nbsp; <a style="font-size:50px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Jl. Tembus Kaliombo No.58 Kota Kediri</a>
 	    </div>
 </div>
 <script>
@@ -638,7 +637,7 @@ function userland() {
  p.write8(kstr, orig_kview_buf);
  chain = new rop();
  if (chain.syscall(20).low == 0) {
-  alert("Webkit Exploit Failed. Try Again.");
+  alert("Webkit Exploit Gagal. Matikan PS dan Coba lagi.");
   while (1);
  }
 }
@@ -891,7 +890,7 @@ function kernel() {
    }
   }
   chain.run(); 
-  alert("Insert USB Drive and click OK after You See The Popup Notification, after jailbreak remove usb from PS4");
+  alert("Masukkan flashdisk, TEKAN OK SETELAH MUNCUL NOTIFIKASI DI POJOK KIRI ATAS");
   {
    for (var i = 1; i < NUM_KQUEUES; i += 2) {
     chain.fcall(window.syscalls[6], kqueues[i]);
@@ -915,12 +914,12 @@ function kernel() {
             chain.fcall(patch_buffer, p.read8(KERNEL_BASE_PTR));
             chain.fcall(window.syscalls[73], patch_buffer, 0x4000);
             chain.run();
-            alert("Jailbreak done. Remove USB Drive from PS4");
+            alert("Jailbreak sukses. Cabut flashdisk dari PS4");
             setTimeout(jbdone, 50);
         }
         else
         {
-            alert("failed to trigger exploit kernel heap might be corrupted, try again or reboot the console");
+            alert("Jailbreak gagal, Matikan PS4 dan coba lagi.");
             p.write8(0, 0);
         }
  };
