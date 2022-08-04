@@ -35,24 +35,11 @@
         }
     </style>
 
-    <script>
-        window.applicationCache.ondownloading = function () {
-            document.getElementById('progress').innerHTML =
-                'Sedang Cache!!';
-        };
-        window.applicationCache.onprogress = function (a) {
-            document.getElementById('progress').innerHTML =
-                Math.round(100 * (a.loaded / a.total)) + '%';
-        };
-        window.applicationCache.oncached = function (e) {
-            document.getElementById('progress').innerHTML =
-                'Proses Cache selesai!';
-            setTimeout(function () {
-                document.getElementById('progress').innerHTML = 'Matikan internet dan buka lagi halaman ini!';
-            }, 1500);
-            localStorage.cachedG = 'yes';
-        };
-    </script>
+   <script>
+window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Sedang Cache halaman!!";};
+window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+window.applicationCache.oncached=function(e){document.getElementById("progress").innerHTML="Cache sukses!!";setTimeout(function(){document.getElementById("progress").innerHTML="Matikan internet dan buka ulang halaman ini!!"; }, 1500);localStorage.cachedG="yes";};
+</script>
     <meta charset="utf-8" />
     <title>Auto Exploit 9.00
 	MUSTIKA GAME STATION</title>
@@ -115,7 +102,8 @@
     </script>
 </head>
 
-<body onload="if(localStorage.cachedG=='yes')setTimeout(poc,50);" style="background-color: #171717">
+
+<body onload="if(localStorage.cachedG=='yes')setTimeout(poc,50);" style='background-color:#1A1920'>
     <h1 style="
         text-shadow: 4px 4px 4px black;
         font-size: 30px;
